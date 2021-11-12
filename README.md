@@ -1,3 +1,3 @@
 # Ksense-Technology-Group_Challenge
 
-![wireframe](./wireframe.png)
+![wireframe](wireframe.png)
