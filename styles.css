@@ -1,0 +1,86 @@
+:root {
+    --teal: #1f4855;
+    --coral: #fd8a70;
+    --coralHover: #ff9b84;
+    --turquoise: #aadae0;
+    --turquoiseHover: #bbdfe4;
+    --grey: #d9dedf;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: var(--grey);
+    color: var(--teal);
+}
+
+.header {
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 30px;
+}
+
+.hint {
+    text-align: center;
+}
+
+.users {
+    width: 50%;
+    margin: 0 auto;
+}
+
+th {
+    border: 1px solid var(--teal);
+    border-radius: 5px;
+    padding: 20px;
+    background-color: var(--turquoise);
+}
+
+tr:first-child {
+    font-size: 1.5rem;
+    text-decoration: underline;
+}
+
+th:nth-child(2) {
+    cursor: pointer;
+}
+
+th:hover {
+    background-color: var(--turquoiseHover);
+}
+
+.clr-btn button {
+    font-weight: bolder;
+    font-size: 1rem;
+    color: var(--teal);
+    background-color: var(--coral);
+    padding: .5rem 2.5rem;
+    margin-left: 155px;
+    border-radius: 5px;
+    border: 1px solid var(--teal);
+}
+
+.clr-btn button:hover {
+    background-color: var(--coralHover);
+}
+
+.posts {
+    width: 50%;
+    margin: 0px auto 0 auto;
+}
+
+.posts div {
+    border: 1px solid var(--teal);
+    border-radius: 5px;
+    background-color: var(--turquoise);
+    padding: 20px;
+    margin: 0px 0 20px 0;
+}
+
+.posts div h1 {
+    margin: 1rem 1rem 1rem 0;
+}
