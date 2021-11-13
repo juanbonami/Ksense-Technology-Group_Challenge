@@ -20,7 +20,14 @@ function addUsersToDOM(data) {
         // creates new elements for users (child elements)
         let tr = document.createElement('tr')
         let id = document.createElement('th')
+        let name = document.createElement('th')
         let userName = document.createElement('th')
+        let email = document.createElement('th')
+        let adress = document.createElement('th')
+        let phone = document.createElement('th')
+        let website = document.createElement('th')
+        let company = document.createElement('th')
+
         userName.onclick = () => {
             // clearPost will always clear out the inner HTML in order to render new posts when clicked
             clearPosts();
@@ -29,12 +36,37 @@ function addUsersToDOM(data) {
         }
         // renders id in this element
         id.innerHTML = users.id;
+        // renders name in this element
+        name.innerHTML = users.name;
         // renders username in this element
         userName.innerHTML = users.username;
-
-        // appends id/username elemets inside tr
+        // renders email in this element
+        email.innerHTML = users.email;
+        // renders adress(object) in this element
+        adress.innerHTML =
+            'Street: ' + users.address.street + ', ' +
+            'Suite: ' + users.address.suite + ', ' +
+            'City: ' + users.address.city + ', ' +
+            'zipcode: ' + users.address.zipcode + ', ' +
+            'Geo: ' + Object.values(users.address.geo);
+        // renders phone in this element
+        phone.innerHTML = users.phone;
+        // renders website in this element
+        website.innerHTML = users.website;
+        // renders company(object) in this element
+        company.innerHTML =
+            'Name: ' + users.company.name + ', ' +
+            'Catch-Phrase: ' + users.company.catchPhrase + ', ' +
+            'Bs: ' + users.company.bs;
+        // appends id/name/username...etc elemets inside tr
         tr.appendChild(id)
+        tr.appendChild(name)
         tr.appendChild(userName)
+        tr.appendChild(email)
+        tr.appendChild(adress)
+        tr.appendChild(phone)
+        tr.appendChild(website)
+        tr.appendChild(company)
         // finally tr gets appended to table(parent) where all subordinate childs will now live
         table.appendChild(tr);
     });
