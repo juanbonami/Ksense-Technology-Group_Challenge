@@ -72,7 +72,6 @@ th:hover {
     color: var(--teal);
     background-color: var(--coral);
     padding: .5rem 2.5rem;
-    /* margin-left: 155px; */
     border-radius: 5px;
     border: 1px solid var(--teal);
 }

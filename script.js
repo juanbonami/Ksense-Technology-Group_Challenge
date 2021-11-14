@@ -34,31 +34,10 @@ function addUsersToDOM(data) {
             // passing the text value 
             getPosts(id.innerText)
         }
-        // renders id in this element
-        id.innerHTML = users.id;
-        // renders name in this element
-        name.innerHTML = users.name;
-        // renders username in this element
-        userName.innerHTML = users.username;
-        // renders email in this element
-        email.innerHTML = users.email;
-        // renders adress(object) in this element
-        adress.innerHTML =
-            'Street: ' + users.address.street + ', ' +
-            'Suite: ' + users.address.suite + ', ' +
-            'City: ' + users.address.city + ', ' +
-            'zipcode: ' + users.address.zipcode + ', ' +
-            'Geo: ' + Object.values(users.address.geo);
-        // renders phone in this element
-        phone.innerHTML = users.phone;
-        // renders website in this element
-        website.innerHTML = users.website;
-        // renders company(object) in this element
-        company.innerHTML =
-            'Name: ' + users.company.name + ', ' +
-            'Catch-Phrase: ' + users.company.catchPhrase + ', ' +
-            'Bs: ' + users.company.bs;
-        // appends id/name/username...etc elemets inside tr
+
+        // calls function to filter newly created elements with data
+        filteringDOMElements(id, name, userName, email, adress, phone, website, company, users);
+        // then those elements get appended to tr
         tr.appendChild(id)
         tr.appendChild(name)
         tr.appendChild(userName)
@@ -70,6 +49,33 @@ function addUsersToDOM(data) {
         // finally tr gets appended to table(parent) where all subordinate childs will now live
         table.appendChild(tr);
     });
+}
+
+function filteringDOMElements(id, name, userName, email, adress, phone, website, company, data) {
+    // renders id in this element
+    id.innerHTML = data.id;
+    // renders name in this element
+    name.innerHTML = data.name;
+    // renders username in this element
+    userName.innerHTML = data.username;
+    // renders email in this element
+    email.innerHTML = data.email;
+    // renders adress(object) in this element
+    adress.innerHTML =
+        'Street: ' + data.address.street + ', ' +
+        'Suite: ' + data.address.suite + ', ' +
+        'City: ' + data.address.city + ', ' +
+        'zipcode: ' + data.address.zipcode + ', ' +
+        'Geo: ' + Object.values(data.address.geo);
+    // renders phone in this element
+    phone.innerHTML = data.phone;
+    // renders website in this element
+    website.innerHTML = data.website;
+    // renders company(object) in this element
+    company.innerHTML =
+        'Name: ' + data.company.name + ', ' +
+        'Catch-Phrase: ' + data.company.catchPhrase + ', ' +
+        'Bs: ' + data.company.bs;
 }
 
 // this function takes in the value of the user's id as an argument and returns it's respective posts
